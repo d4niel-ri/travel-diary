@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "date": "29-07-2020",
+      "author_id": 3,
+      "title": "Bersemayam di tanah Dewata",
+      "imageUrl": "https://asset.kompas.com/crops/J1nq3-cpD6NuulJX_Eo7mn3zV1o=/0x490:1080x1210/750x500/data/photo/2022/06/24/62b5dce7d6a93.jpg",
+      "shortDesc": "Liburan di tahun baru 2020 keberangkatan saya menuju Pulau Dewata Bali. Sampai lah saya malam itu di Bali Airport menujukan waktu jam 02.00, dan melanjutkan pejalanan yang menyenangkan.",
+      "description": ""
+    },
+    {
+      "title": "New Post",
+      "author": "Dafa",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Daniel Riyanto",
+      "email": "daniel.riyanto@phincon.com",
+      "password": "hahehu"
+    },
+    {
+      "id": 2,
+      "fullName": "Darwin Riyanto",
+      "email": "darwin.riyanto@gmail.com",
+      "password": "huheha"
+    },
+    {
+      "id": 3,
+      "fullName": "Cipto",
+      "email": "cipto@gmail.com",
+      "password": "huheha"
+    }
+  ]
+}
