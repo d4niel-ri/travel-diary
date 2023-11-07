@@ -18,15 +18,10 @@ export function* doGetAllPost() {
     // Convert the Set back to an array
     const authorIds = Array.from(uniqueAuthorIds);
 
-    console.log(authorIds, "<< authorIDs");
-
     for (const authorId of authorIds) {
-      console.log(authorId, "<< Author ID");
       const userResponse = yield call(getUserByID, authorId);
       authorMapping[authorId] = userResponse[0].fullName;
     }
-
-    console.log(authorMapping, "<< authorMapping");
 
     // Update the state with the author names in the posts
     const postsWithAuthors = response.map((post) => ({
@@ -42,7 +37,7 @@ export function* doGetAllPost() {
 }
 
 export function* doCreatePost({ post }) {
-  console.log("<< Call do Create Post");
+  console.log("<< Do Create Post Home");
 
   yield put(setLoading(true));
   try {

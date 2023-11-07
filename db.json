@@ -71,24 +71,6 @@
       "imageUrl": "https://asset.kompas.com/crops/J1nq3-cpD6NuulJX_Eo7mn3zV1o=/0x490:1080x1210/750x500/data/photo/2022/06/24/62b5dce7d6a93.jpg",
       "shortDesc": "Liburan di tahun baru 2020 keberangkatan saya menuju Pulau Dewata Bali. Sampai lah saya malam itu di Bali Airport menujukan waktu jam 02.00, dan melanjutkan pejalanan yang menyenangkan.",
       "description": "<p>Hahehu</p>"
-    },
-    {
-      "title": "sdsd",
-      "imageUrl": "https://asset.kompas.com/crops/_SARkKyTnnXtBMLCe-5LhrzsXSg=/82x0:940x429/750x500/data/photo/2021/08/25/612619c67c167.png",
-      "shortDesc": "sddsdsd",
-      "description": "<ol><li>sdsdsdssd</li><li>sdsd</li></ol><p>sdsdsdsdsdsdsdsds</p>",
-      "date": "07-11-2023",
-      "author_id": 1,
-      "id": 9
-    },
-    {
-      "title": "sdsd",
-      "imageUrl": "https://asset.kompas.com/crops/_SARkKyTnnXtBMLCe-5LhrzsXSg=/82x0:940x429/750x500/data/photo/2021/08/25/612619c67c167.png",
-      "shortDesc": "sddsdsd",
-      "description": "<ol><li>sdsdsdssd</li><li>sdsd</li></ol><p>sdsdsdsdsdsdsdsds</p>",
-      "date": "07-11-2023",
-      "author_id": 1,
-      "id": 10
     }
   ],
   "users": [
@@ -97,11 +79,7 @@
       "fullName": "Daniel Riyanto",
       "email": "daniel.riyanto@phincon.com",
       "password": "hahehu",
-      "bookmark_ids": [
-        1,
-        6,
-        5
-      ]
+      "bookmark_ids": []
     },
     {
       "id": 2,

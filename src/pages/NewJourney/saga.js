@@ -5,7 +5,9 @@ import { CREATE_POST } from './constants';
 
 export function* doCreatePost({ post, navigate }) {
   yield put(setLoading(true));
+  console.log("Do Create Post NewJourney");
   try {
+    // eslint-disable-next-line no-unused-vars
     const response = yield call(createPost, post);
     yield call(navigate);
   } catch (error) {

@@ -41,6 +41,10 @@ export const getAllUsers = () => {
   return callAPI(urls.users, "GET");
 }
 
+export const createUser = (user) => {
+  return callAPI(urls.users, 'POST', {}, {}, user);
+}
+
 export const changeUserBookmarks = (user, bookmarkIDs) => {
   return callAPI(`${urls.users}/${user.id}`, "PUT", {}, {}, {...user, bookmark_ids: bookmarkIDs});
 }

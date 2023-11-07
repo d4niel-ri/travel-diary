@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import styles from "./styles.module.scss";
@@ -24,6 +24,7 @@ const NewJourneyPage = () => {
     if (!inputs.title || !inputs.imageUrl || !inputs.shortDesc || !description) {
       return setErrorMsg("Please fill all fields!");
     }
+    console.log("<< HANDLE SUBMIT");
 
     const date = getCurrentDate();
     const author_id = user.id;
@@ -46,19 +47,19 @@ const NewJourneyPage = () => {
     <div className={styles.content}>
       <h2>New Journey</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className={styles.input}>
           <label htmlFor="title">Title</label>
           <input type="title" name="title" id="title" onChange={handleInputChange} />
         </div>
-        <div>
+        <div className={styles.input}>
           <label htmlFor="imageUrl">Image Url</label>
           <input type="url" name="imageUrl" id="imageUrl" onChange={handleInputChange} />
         </div>
-        <div>
+        <div className={styles.input}>
           <label htmlFor="shortDesc">Short Description</label>
-          <input type="text" name="shortDesc" id="shortDesc" onChange={handleInputChange} />
+          <textarea name="shortDesc" id="shortDesc" rows="3" onChange={handleInputChange} />
         </div>
-        <div>
+        <div className={styles.input}>
           <label htmlFor="description">Description</label>
           <Description description={description} setDescription={setDescription} />
         </div>

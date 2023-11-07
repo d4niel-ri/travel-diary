@@ -6,6 +6,7 @@ import { getAllPostByAuthor } from "./actions";
 import PostCard from "../../components/PostCard/PostCard";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import { changeUserBookmarks } from "../../App/actions";
 
 const ProfilePage = () => {
   const navigate = useNavigate();
@@ -14,8 +15,17 @@ const ProfilePage = () => {
   const listPosts = useSelector((state) => state.profileReducer.posts);
   const loading = useSelector((state) => state.profileReducer.loading);
 
-  console.log(listPosts, '<< LIST POST');
-  console.log(user, "<< USER");
+  const handleClickBookmark = (post) => {
+    let bookmarkIDs;
+
+    if (user.bookmark_ids.includes(post.id)) {
+      bookmarkIDs = user.bookmark_ids.filter((bookmarkID) => bookmarkID !== post.id);
+    } else {
+      bookmarkIDs = [...user.bookmark_ids, post.id];
+    }
+
+    dispatch(changeUserBookmarks(user, bookmarkIDs));
+  }
 
   useEffect(() => {
     if (user) {
@@ -47,7 +57,7 @@ const ProfilePage = () => {
             {loading ? (<p>Loading...</p>) : (
               <>
                 {listPosts.map((post) => (
-                  <PostCard post={post} key={post.id} />
+                  <PostCard post={post} handleClickBookmark={handleClickBookmark} key={post.id} />
                 ))}
               </>
             )}

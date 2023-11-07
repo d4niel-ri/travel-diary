@@ -1,2 +1,2 @@
-export const CREATE_POST = 'CREATE_POST';
-export const SET_LOADING = 'SET_LOADING';
+export const CREATE_POST = 'NEW_JOURNEY/CREATE_POST';
+export const SET_LOADING = 'NEW_JOURNEY/SET_LOADING';

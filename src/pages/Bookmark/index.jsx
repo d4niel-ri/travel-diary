@@ -2,8 +2,9 @@ import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getAllPostByBookmarks } from "./actions";
+import { getAllPostByBookmarks, setAllPost } from "./actions";
 import PostCard from "../../components/PostCard/PostCard";
+import { changeUserBookmarks } from "../../App/actions";
 
 const BookmarkPage = () => {
   const navigate = useNavigate();
@@ -12,8 +13,13 @@ const BookmarkPage = () => {
   const listPosts = useSelector((state) => state.bookmarkReducer.posts);
   const loading = useSelector((state) => state.bookmarkReducer.loading);
 
-  console.log(listPosts, "<< LIST POST");
-  console.log(user, "<< USER");
+  const handleClickBookmark = (post) => {
+    const bookmarkIDs = user.bookmark_ids.filter((bookmarkID) => bookmarkID !== post.id);
+    const newListPosts = listPosts.filter((item) => item.id !== post.id);
+
+    dispatch(changeUserBookmarks(user, bookmarkIDs));
+    dispatch(setAllPost(newListPosts));
+  }
 
   useEffect(() => {
     if (user) {
@@ -24,7 +30,7 @@ const BookmarkPage = () => {
       navigate("/");
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user.bookmark_ids])
+  }, [])
 
   return (
     <div className={styles.content}>
@@ -33,7 +39,7 @@ const BookmarkPage = () => {
         {loading ? (<p>Loading...</p>) : (
           <>
             {listPosts.map((post) => (
-              <PostCard post={post} key={post.id} />
+              <PostCard post={post} handleClickBookmark={handleClickBookmark} key={post.id} />
             ))}
           </>
         )}

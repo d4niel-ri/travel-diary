@@ -20,7 +20,6 @@ const Navigation = () => {
   const [isOpenLogin, setIsOpenLogin] = useState(false);
   const [isOpenRegister, setIsOpenRegister] = useState(false);
   const user = useSelector((state) => state.appReducer.user);
-  console.log(user);
 
   const navigateToHomePage = () => navigate("/");
 
@@ -40,7 +39,6 @@ const Navigation = () => {
 
   useEffect(() => {
     const userDataFromLocalStorage = useGetValFromLocal("user", null);
-    console.log(userDataFromLocalStorage, "<< USERDATAFROMLOCALSTORAGE");
     if (userDataFromLocalStorage) dispatch(setUser(userDataFromLocalStorage));
   }, []);
 

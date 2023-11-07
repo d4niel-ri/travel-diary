@@ -15,7 +15,6 @@ const bookmarkReducer = (state = initialState, action) =>
         break;
       case SET_LOADING:
         draft.loading = action.value;
-        console.log(action, '<<< Action loading');
         break;
     }
   })

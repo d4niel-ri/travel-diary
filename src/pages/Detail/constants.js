@@ -1,3 +1,3 @@
-export const GET_POST_BY_ID = 'GET_POST_BY_ID';
-export const SET_POST = 'SET_POST';
-export const SET_LOADING = 'SET_LOADING';
+export const GET_POST_BY_ID = 'DETAIL/GET_POST_BY_ID';
+export const SET_POST = 'DETAIL/SET_POST';
+export const SET_LOADING = 'DETAIL/SET_LOADING';

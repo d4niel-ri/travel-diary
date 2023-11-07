@@ -5,6 +5,7 @@
   box-shadow: 0 0 1px 1px #ddd;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   .image_card {
     width: 100%;
@@ -42,7 +43,6 @@
     padding: 0.75rem 0.5rem 0.5rem;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
 
     p {
       white-space: nowrap;

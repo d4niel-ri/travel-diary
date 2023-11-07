@@ -11,7 +11,6 @@ const Login = ({ isOpenLogin, setIsOpenLogin, setIsOpenRegister }) => {
   const error = useSelector((state) => state.appReducer.error);
   const [inputs, setInputs] = useState({email: "", password: ""});
 
-  console.log(inputs);
 
   const handleInputChange = (e) => {
     setInputs((prev) => ({...prev, [e.target.name]: e.target.value}));
@@ -34,7 +33,6 @@ const Login = ({ isOpenLogin, setIsOpenLogin, setIsOpenRegister }) => {
       return dispatch(setErrorMessage("Please fill all fields!"));
     } 
 
-    console.log("Dispatch User login");
     dispatch(userLogin(inputs, handleCloseLogin));
   }
   

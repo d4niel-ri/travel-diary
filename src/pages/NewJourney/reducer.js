@@ -11,7 +11,6 @@ const newJourneyReducer = (state = initialState, action) =>
     switch (action.type) {
       case SET_LOADING:
         draft.loading = action.value;
-        console.log(action, '<<< Action loading');
         break;
     }
   })

@@ -11,11 +11,7 @@ const DetailPage = () => {
   const loading = useSelector((state) => state.detailReducer.loading);
   const { id } = useParams();
 
-  console.log(post, '<< POST');
-  console.log(id, "<< ID");
-
   useEffect(() => {
-    console.log("<< DISPATCHGETPOST");
     dispatch(getPostByID(id));
   }, [])
 

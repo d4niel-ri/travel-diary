@@ -15,7 +15,7 @@
     flex-direction: column;
     gap: 1rem;
 
-    div {
+    div.input {
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
@@ -47,6 +47,7 @@
         background: #fff; 
         font-size: 18px;
         font-weight: 500;
+        resize: none;
       }
 
       .input {
@@ -68,18 +69,12 @@
       font-weight: 700; 
     }
 
-    p {
-      color: #B1B1B1;
+    p.error {
       font-size: 18px;
       font-style: italic;
       font-weight: 100;
       text-align: center;
-    }
-
-    .error {
       color: #aa0000;
-      text-align: left;
-      font-style: normal;
     }
   }
 }

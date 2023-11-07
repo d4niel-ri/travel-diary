@@ -28,10 +28,8 @@ const homeReducer = (state = initialState, action) =>
         break;
       case SET_LOADING:
         draft.loading = action.value;
-        console.log(action, '<<< Action loading');
         break;
       case SET_COUNT:
-        console.log(action, '<<< ACTIOn')
         draft.count = action.value;
         break;
     }
