@@ -1,0 +1,6 @@
+export const USER_LOGIN = 'USER_LOGIN';
+export const USER_LOGOUT = 'USER_LOGOUT';
+export const SET_USER = 'SET_USER';
+export const SET_LOADING = 'SET_LOADING';
+export const CHANGE_USER_BOOKMARKS = 'CHANGE_USER_BOOKMARKS';
+export const SET_ERROR_MESSAGE = 'SET_ERROR_MESSAGE';

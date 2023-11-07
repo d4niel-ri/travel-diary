@@ -1,0 +1,65 @@
+.content {
+  padding: 1rem 2.5%;
+  background: #EDEDED;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: left;
+  }
+
+  .profile_head {
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+
+    .profile_image {
+      width: 12.5rem;
+      height: 12.5rem;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .profile_name {
+      font-size: 24px;
+      font-weight: 900; 
+    }
+
+    .profile_email {
+      color: #6C6C6C;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 100;
+    }
+
+    .btn {
+      margin-top: 0.5rem;
+      text-transform: capitalize;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  .list_posts {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;    
+    justify-content: space-between;
+  }
+
+  .list_posts::after {
+    content: "";
+    flex: auto;
+  }
+}

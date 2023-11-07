@@ -4,6 +4,8 @@ import {
   CREATE_POST,
   SET_NEW_POST,
   SET_COUNT,
+  FILTER_POST,
+  SET_LOADING,
 } from './constants';
 
 export const getAllPost = () => ({
@@ -13,6 +15,11 @@ export const getAllPost = () => ({
 export const setAllPost = (posts) => ({
   type: SET_ALL_POST,
   posts
+})
+
+export const filterPost = (searchText) => ({
+  type: FILTER_POST,
+  searchText
 })
 
 export const createPost = (post) => ({
@@ -25,7 +32,12 @@ export const setNewPost = (post) => ({
   post
 });
 
-export const setCount = (value ) => ({
+export const setLoading = (value) => ({
+  type: SET_LOADING,
+  value
+});
+
+export const setCount = (value) => ({
   type: SET_COUNT,
   value
-})
+});

@@ -1,0 +1,48 @@
+.journey {
+  padding: 1rem 2.5%;
+  background: #EDEDED;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: left;
+  }
+
+  .filter {
+    width: 92%;
+    margin: 1rem auto 0;
+    display: flex;
+    border-radius: 5px;
+
+    input {
+      flex-grow: 1;
+      padding: 0.75rem;
+      background-color: #FFF;
+      font-size: 18px;
+      font-weight: 400; 
+      color: inherit;
+      outline: none;
+      border: none;
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    .btn {
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: 700; 
+    }
+  }
+
+  .list_posts {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;    
+  }
+
+  .list_posts::after {
+    content: "";
+    flex: auto;
+  }
+}

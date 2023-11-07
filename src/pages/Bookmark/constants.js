@@ -1,0 +1,3 @@
+export const GET_ALL_POST_BY_BOOKMARKS = 'GET_ALL_POST_BY_BOOKMARKS';
+export const SET_ALL_POST = 'SET_ALL_POST';
+export const SET_LOADING = 'SET_LOADING';
